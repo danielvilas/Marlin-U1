@@ -25,16 +25,8 @@
  * Melzi pin assignments
  */
 
-<<<<<<< HEAD:Marlin/pins_MELZI.h
-#ifndef BOARD_NAME
-  #define BOARD_NAME "Melzi"
-#endif
-
-#define IS_MELZI
-=======
 #ifndef BOARD_INFO_NAME
   #define BOARD_INFO_NAME "Melzi"
 #endif
 
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_MELZI.h
 #include "pins_SANGUINOLOLU_12.h"

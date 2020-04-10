@@ -76,18 +76,11 @@
   #define I2CPE_ERR_PRST_ARRAY_SIZE   10
 #endif
 
-<<<<<<< HEAD:Marlin/I2CPositionEncoder.h
-  #if ENABLED(I2CPE_ERR_ROLLING_AVERAGE)
-    #define I2CPE_ERR_ARRAY_SIZE        32
-    #define I2CPE_ERR_PRST_ARRAY_SIZE   10
-  #endif
-=======
 // Error Correction Methods
 #define I2CPE_ECM_NONE                0
 #define I2CPE_ECM_MICROSTEP           1
 #define I2CPE_ECM_PLANNER             2
 #define I2CPE_ECM_STALLDETECT         3
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/encoder_i2c.h
 
 // Encoder types
 #define I2CPE_ENC_TYPE_ROTARY         0
@@ -105,16 +98,7 @@ typedef union {
   uint8_t          bval[4];
 } i2cLong;
 
-<<<<<<< HEAD:Marlin/I2CPositionEncoder.h
-  typedef union {
-    volatile int32_t val = 0;
-    uint8_t          bval[4];
-  } i2cLong;
-
-  class I2CPositionEncoder {
-=======
 class I2CPositionEncoder {
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/encoder_i2c.h
   private:
     AxisEnum  encoderAxis         = I2CPE_DEF_AXIS;
 
@@ -224,15 +208,9 @@ class I2CPositionEncoder {
 
     FORCE_INLINE int get_stepper_ticks() { return stepperTicks; }
     FORCE_INLINE void set_stepper_ticks(const int ticks) { stepperTicks = ticks; }
-<<<<<<< HEAD:Marlin/I2CPositionEncoder.h
-  };
-
-  class I2CPositionEncodersMgr {
-=======
 };
 
 class I2CPositionEncodersMgr {
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/encoder_i2c.h
   private:
     static bool I2CPE_anyaxis;
     static uint8_t I2CPE_addr, I2CPE_idx;

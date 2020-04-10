@@ -28,11 +28,8 @@
 
 #include "watchdog.h"
 
-<<<<<<< HEAD:Marlin/watchdog.cpp
-=======
 #include "../../MarlinCore.h"
 
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/HAL/AVR/watchdog.cpp
 // Initialize watchdog with 8s timeout, if possible. Otherwise, make it 4s.
 void watchdog_init() {
   #if ENABLED(WATCHDOG_DURATION_8S) && defined(WDTO_8S)
@@ -41,11 +38,7 @@ void watchdog_init() {
     #define WDTO_NS WDTO_4S
   #endif
   #if ENABLED(WATCHDOG_RESET_MANUAL)
-<<<<<<< HEAD:Marlin/watchdog.cpp
-    // We enable the watchdog timer, but only for the interrupt.
-=======
     // Enable the watchdog timer, but only for the interrupt.
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/HAL/AVR/watchdog.cpp
     // Take care, as this requires the correct order of operation, with interrupts disabled.
     // See the datasheet of any AVR chip for details.
     wdt_reset();
@@ -69,15 +62,8 @@ void watchdog_init() {
 #if ENABLED(WATCHDOG_RESET_MANUAL)
   ISR(WDT_vect) {
     sei();  // With the interrupt driven serial we need to allow interrupts.
-<<<<<<< HEAD:Marlin/watchdog.cpp
-    SERIAL_ERROR_START();
-    SERIAL_ERRORLNPGM("Watchdog barked, please turn off the printer.");
-    kill(PSTR("ERR:Watchdog")); //kill blocks //up to 16 characters so it fits on a 16x2 display
-    while (1); //wait for user or serial reset
-=======
     SERIAL_ERROR_MSG(STR_WATCHDOG_FIRED);
     minkill();  // interrupt-safe final kill and infinite loop
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/HAL/AVR/watchdog.cpp
   }
 #endif
 

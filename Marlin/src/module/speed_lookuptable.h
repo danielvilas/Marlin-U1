@@ -19,15 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-<<<<<<< HEAD:Marlin/speed_lookuptable.h
-
-#ifndef SPEED_LOOKUPTABLE_H
-#define SPEED_LOOKUPTABLE_H
-
-#include "MarlinConfig.h"
-=======
 #pragma once
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/speed_lookuptable.h
 
 #if F_CPU == 16000000
 

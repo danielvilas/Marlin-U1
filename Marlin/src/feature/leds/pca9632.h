@@ -26,12 +26,6 @@
  * Written by Robert Mendon Feb 2017.
  */
 
-<<<<<<< HEAD:Marlin/pca9632.h
-#ifndef __PCA9632_H__
-#define __PCA9632_H__
-
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/leds/pca9632.h
 struct LEDColor;
 typedef LEDColor LEDColor;
 

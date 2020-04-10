@@ -21,12 +21,6 @@
  */
 #pragma once
 
-<<<<<<< HEAD:Marlin/hex_print_routines.h
-#ifndef HEX_PRINT_ROUTINES_H
-#define HEX_PRINT_ROUTINES_H
-
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/hex_print_routines.h
 #include <stdint.h>
 
 //
@@ -46,12 +40,8 @@ void print_hex_word(const uint16_t w);
 void print_hex_address(const void * const w);
 void print_hex_long(const uint32_t w, const char delimiter);
 
-<<<<<<< HEAD:Marlin/hex_print_routines.h
-#endif // HEX_PRINT_ROUTINES_H
-=======
 #ifdef CPU_32_BIT
   typedef uint32_t ptr_int_t;
 #else
   typedef uint16_t ptr_int_t;
 #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/hex_print_routines.h

@@ -40,21 +40,12 @@
 #define DAC_STEPPER_ORDER { 0, 1, 2, 3 }
 
 #define DAC_STEPPER_SENSE    0.05   // sense resistors on rigidboard stepper chips are .05 value
-<<<<<<< HEAD:Marlin/pins_RIGIDBOARD_V2.h
-#define DAC_STEPPER_ADDRESS  0
-#define DAC_STEPPER_MAX   4096   // was 5000 but max allowable value is actually 4096
-#define DAC_STEPPER_VREF     1   // internal Vref, gain 2x = 4.096V
-#define DAC_STEPPER_GAIN     1   // value of 1 here sets gain of 2
-#define DAC_DISABLE_PIN     42   // set low to enable DAC
-#define DAC_OR_ADDRESS    0x01
-=======
 #define DAC_STEPPER_ADDRESS                   0
 #define DAC_STEPPER_MAX                     4096  // was 5000 but max allowable value is actually 4096
 #define DAC_STEPPER_VREF                      1   // internal Vref, gain 2x = 4.096V
 #define DAC_STEPPER_GAIN                      1   // value of 1 here sets gain of 2
 #define DAC_DISABLE_PIN                      42   // set low to enable DAC
 #define DAC_OR_ADDRESS 0x01
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/ramps/pins_RIGIDBOARD_V2.h
 
 #ifndef DAC_MOTOR_CURRENT_DEFAULT
   #define DAC_MOTOR_CURRENT_DEFAULT { 70, 80, 90, 80 } // Default drive percent - X, Y, Z, E axis

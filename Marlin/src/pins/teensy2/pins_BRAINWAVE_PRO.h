@@ -79,11 +79,7 @@
   #error "Oops! Select 'Teensy++ 2.0' or 'Printrboard' in 'Tools > Board.'"
 #endif
 
-<<<<<<< HEAD:Marlin/pins_BRAINWAVE_PRO.h
-#define BOARD_NAME         "Brainwave Pro"
-=======
 #define BOARD_INFO_NAME "Brainwave Pro"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_BRAINWAVE_PRO.h
 
 //
 // Limit Switches
@@ -128,17 +124,10 @@
 //
 // Heaters / Fans
 //
-<<<<<<< HEAD:Marlin/pins_BRAINWAVE_PRO.h
-#define HEATER_0_PIN       27   // B7
-#define HEATER_BED_PIN     26   // B6  Bed
-#ifndef FAN_PIN
-  #define FAN_PIN          16   // C6  Fan, PWM3A
-=======
 #define HEATER_0_PIN                          27  // B7
 #define HEATER_BED_PIN                        26  // B6  Bed
 #ifndef FAN_PIN
   #define FAN_PIN                             16  // C6  Fan, PWM3A
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_BRAINWAVE_PRO.h
 #endif
 
 //

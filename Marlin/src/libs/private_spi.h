@@ -21,13 +21,6 @@
  */
 #pragma once
 
-<<<<<<< HEAD:Marlin/MarlinSPI.h
-#ifndef __MARLIN_SPI_H__
-#define __MARLIN_SPI_H__
-
-#include <stdint.h>
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/private_spi.h
 #include "softspi.h"
 #include <stdint.h>
 
@@ -50,11 +43,6 @@ class SPIclass<MISO_PIN, MOSI_PIN, SCK_PIN> {
       SET_INPUT_PULLUP(MISO_PIN);
     }
     FORCE_INLINE static uint8_t receive() {
-<<<<<<< HEAD:Marlin/MarlinSPI.h
-      SPDR = 0;
-      while (!TEST(SPSR, SPIF)) { /* nada */ }
-      return SPDR;
-=======
       #if defined(__AVR__) || defined(__MK20DX256__) || defined(__MK64FX512__) || defined(__MK66FX1M0__)
         SPDR = 0;
         for (;!TEST(SPSR, SPIF););
@@ -62,11 +50,5 @@ class SPIclass<MISO_PIN, MOSI_PIN, SCK_PIN> {
       #else
         return spiRec();
       #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/private_spi.h
     }
 };
-<<<<<<< HEAD:Marlin/MarlinSPI.h
-
-#endif // __MARLIN_SPI_H__
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/private_spi.h

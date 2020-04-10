@@ -77,11 +77,7 @@
   #error "Oops! Select 'Teensy++ 2.0' or 'Printrboard' in 'Tools > Board.'"
 #endif
 
-<<<<<<< HEAD:Marlin/pins_TEENSYLU.h
-#define BOARD_NAME         "Teensylu"
-=======
 #define BOARD_INFO_NAME "Teensylu"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_TEENSYLU.h
 
 //
 // Limit Switch definitions that match the SCHEMATIC
@@ -131,11 +127,7 @@
 #define HEATER_BED_PIN                        14  // C4 PWM3C
 
 #ifndef FAN_PIN
-<<<<<<< HEAD:Marlin/pins_TEENSYLU.h
-  #define FAN_PIN               16   // C6 PWM3A
-=======
   #define FAN_PIN                             16  // C6 PWM3A
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_TEENSYLU.h
 #endif
 
 //

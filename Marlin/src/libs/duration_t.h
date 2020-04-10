@@ -23,9 +23,6 @@
 
 #include "../HAL/shared/Marduino.h"
 
-#include <stdio.h>
-#include <inttypes.h>
-
 struct duration_t {
   /**
    * @brief Duration is stored in seconds
@@ -154,19 +151,11 @@ struct duration_t {
              m = uint16_t(this->minute() % 60UL);
     if (with_days) {
       uint16_t d = this->day();
-<<<<<<< HEAD:Marlin/duration_t.h
-      sprintf_P(buffer, PSTR("%ud %02u:%02u"), d, h % 24, m);
-      return d >= 10 ? 9 : 8;
-    }
-    else if (h < 100) {
-      sprintf_P(buffer, PSTR("%02u:%02u"), h, m);
-=======
       sprintf_P(buffer, PSTR("%hud %02hu:%02hu"), d, h % 24, m);
       return d >= 10 ? 9 : 8;
     }
     else if (h < 100) {
       sprintf_P(buffer, PSTR("%02hu:%02hu"), h, m);
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/duration_t.h
       return 5;
     }
     else {

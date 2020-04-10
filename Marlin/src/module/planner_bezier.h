@@ -24,12 +24,7 @@
 /**
  * planner_bezier.h
  *
-<<<<<<< HEAD:Marlin/language_pl.h
- * LCD Menu Messages
- * See also http://marlinfw.org/docs/development/lcd_language.html
-=======
  * Compute and buffer movement commands for Bézier curves
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/planner_bezier.h
  *
  */
 

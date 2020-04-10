@@ -34,23 +34,4 @@
 #define BOARD_INFO_NAME "MKS BASE 1.0"
 #define MKS_BASE_VERSION 10
 
-<<<<<<< HEAD:Marlin/pins_MKS_BASE.h
-//
-// Heaters / Fans
-//
-// Power outputs EFBF or EFBE
-#define MOSFET_D_PIN 7
-
-#define CASE_LIGHT_PIN            2
-
-//
-// M3/M4/M5 - Spindle/Laser Control
-//
-#define SPINDLE_LASER_PWM_PIN     2   // MUST BE HARDWARE PWM
-#define SPINDLE_LASER_ENABLE_PIN 15   // Pin should have a pullup!
-#define SPINDLE_DIR_PIN          19
-
-#include "pins_RAMPS.h"
-=======
 #include "pins_MKS_BASE_common.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/ramps/pins_MKS_BASE_10.h

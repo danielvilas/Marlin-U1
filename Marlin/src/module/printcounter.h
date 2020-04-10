@@ -21,31 +21,19 @@
  */
 #pragma once
 
-<<<<<<< HEAD:Marlin/printcounter.h
-#ifndef PRINTCOUNTER_H
-#define PRINTCOUNTER_H
-=======
 #include "../libs/stopwatch.h"
 #include "../libs/duration_t.h"
 #include "../inc/MarlinConfig.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
 // Print debug messages with M111 S2
 //#define DEBUG_PRINTCOUNTER
 
-<<<<<<< HEAD:Marlin/printcounter.h
-#include "macros.h"
-#include "language.h"
-#include "stopwatch.h"
-#include <avr/eeprom.h>
-=======
 #if USE_WIRED_EEPROM
   // round up address to next page boundary (assuming 32 byte pages)
   #define STATS_EEPROM_ADDRESS 0x40
 #else
   #define STATS_EEPROM_ADDRESS 0x32
 #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
 struct printStatistics {    // 16 bytes
   //const uint8_t magic;    // Magic header, it will always be 0x16
@@ -54,8 +42,6 @@ struct printStatistics {    // 16 bytes
   uint32_t printTime;       // Accumulated printing time
   uint32_t longestPrint;    // Longest successful print job
   float    filamentUsed;    // Accumulated filament consumed in mm
-<<<<<<< HEAD:Marlin/printcounter.h
-=======
   #if SERVICE_INTERVAL_1 > 0
     uint32_t nextService1;  // Service intervals (or placeholders)
   #endif
@@ -65,24 +51,16 @@ struct printStatistics {    // 16 bytes
   #if SERVICE_INTERVAL_3 > 0
     uint32_t nextService3;
   #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 };
 
 class PrintCounter: public Stopwatch {
   private:
     typedef Stopwatch super;
 
-<<<<<<< HEAD:Marlin/printcounter.h
-    #if ENABLED(I2C_EEPROM) || ENABLED(SPI_EEPROM)
-      typedef uint32_t promdress;
-    #else
-      typedef uint16_t promdress;
-=======
     #if USE_WIRED_EEPROM || defined(CPU_32_BIT)
       typedef uint32_t eeprom_address_t;
     #else
       typedef uint16_t eeprom_address_t;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
     #endif
 
     static printStatistics data;
@@ -91,11 +69,7 @@ class PrintCounter: public Stopwatch {
      * @brief EEPROM address
      * @details Defines the start offset address where the data is stored.
      */
-<<<<<<< HEAD:Marlin/printcounter.h
-    static const promdress address;
-=======
     static const eeprom_address_t address;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
     /**
      * @brief Interval in seconds between counter updates
@@ -105,11 +79,7 @@ class PrintCounter: public Stopwatch {
      * @note The max value for this option is 60(s), otherwise integer
      * overflow will happen.
      */
-<<<<<<< HEAD:Marlin/printcounter.h
-    static const uint16_t updateInterval;
-=======
     static constexpr uint16_t updateInterval = 10;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
     /**
      * @brief Interval in seconds between EEPROM saves
@@ -117,11 +87,7 @@ class PrintCounter: public Stopwatch {
      * EEPROM save cycle, the development team recommends to set this value
      * no lower than 3600 secs (1 hour).
      */
-<<<<<<< HEAD:Marlin/printcounter.h
-    static const uint16_t saveInterval;
-=======
     static constexpr uint16_t saveInterval = 3600;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
     /**
      * @brief Timestamp of the last call to deltaDuration()
@@ -216,14 +182,11 @@ class PrintCounter: public Stopwatch {
     static bool start();
     static bool stop();
     static void reset();
-<<<<<<< HEAD:Marlin/printcounter.h
-=======
 
     #if HAS_SERVICE_INTERVALS
       static void resetServiceInterval(const int index);
       static bool needsService(const int index);
     #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h
 
     #if ENABLED(DEBUG_PRINTCOUNTER)
 
@@ -242,8 +205,3 @@ class PrintCounter: public Stopwatch {
 #else
   extern Stopwatch print_job_timer;
 #endif
-<<<<<<< HEAD:Marlin/printcounter.h
-
-#endif // PRINTCOUNTER_H
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/module/printcounter.h

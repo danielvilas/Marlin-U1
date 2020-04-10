@@ -22,15 +22,11 @@
 
 #include "stopwatch.h"
 
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-#include "Marlin.h"
-=======
 #include "../inc/MarlinConfig.h"
 
 #if ENABLED(EXTENSIBLE_UI)
   #include "../lcd/extui/ui_api.h"
 #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
 
 Stopwatch::State Stopwatch::state;
 millis_t Stopwatch::accumulator;
@@ -43,12 +39,9 @@ bool Stopwatch::stop() {
   #endif
 
   if (isRunning() || isPaused()) {
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-=======
     #if ENABLED(EXTENSIBLE_UI)
       ExtUI::onPrintTimerStopped();
     #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
     state = STOPPED;
     stopTimestamp = millis();
     return true;
@@ -62,12 +55,9 @@ bool Stopwatch::pause() {
   #endif
 
   if (isRunning()) {
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-=======
     #if ENABLED(EXTENSIBLE_UI)
       ExtUI::onPrintTimerPaused();
     #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
     state = PAUSED;
     stopTimestamp = millis();
     return true;
@@ -80,13 +70,10 @@ bool Stopwatch::start() {
     Stopwatch::debug(PSTR("start"));
   #endif
 
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-=======
   #if ENABLED(EXTENSIBLE_UI)
     ExtUI::onPrintTimerStarted();
   #endif
 
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
   if (!isRunning()) {
     if (isPaused()) accumulator = duration();
     else reset();
@@ -98,21 +85,13 @@ bool Stopwatch::start() {
   else return false;
 }
 
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-void Stopwatch::resume(const millis_t duration) {
-=======
 void Stopwatch::resume(const millis_t with_time) {
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
   #if ENABLED(DEBUG_STOPWATCH)
     Stopwatch::debug(PSTR("resume"));
   #endif
 
   reset();
-<<<<<<< HEAD:Marlin/stopwatch.cpp
-  if ((accumulator = duration)) state = RUNNING;
-=======
   if ((accumulator = with_time)) state = RUNNING;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/libs/stopwatch.cpp
 }
 
 void Stopwatch::reset() {

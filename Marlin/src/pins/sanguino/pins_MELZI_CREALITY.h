@@ -31,18 +31,9 @@
  * See http://www.instructables.com/id/Burn-Arduino-Bootloader-with-Arduino-MEGA/
  */
 
-<<<<<<< HEAD:Marlin/pins_MELZI_CREALITY.h
-#define BOARD_NAME "Melzi (Creality)"
-
-#include "pins_MELZI.h"
-
-// For the stock CR-10 use the REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
-//   option for the display in Configuration.h
-=======
 #define BOARD_INFO_NAME "Melzi (Creality)"
 
 #include "pins_MELZI.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_MELZI_CREALITY.h
 
 //
 // For the stock CR-10 enable CR10_STOCKDISPLAY in Configuration.h
@@ -62,23 +53,6 @@
 #define LCD_PINS_ENABLE                      17   // ST9720 DAT
 #define LCD_PINS_D4                          30   // ST9720 CLK
 
-<<<<<<< HEAD:Marlin/pins_MELZI_CREALITY.h
-#define LCD_SDSS           31   // Smart Controller SD card reader (rather than the Melzi)
-#define LCD_PINS_RS        28   // ST9720 CS
-#define LCD_PINS_ENABLE    17   // ST9720 DAT
-#define LCD_PINS_D4        30   // ST9720 CLK
-#define FIL_RUNOUT_PIN     -1   // Uses Beeper/LED Pin Pulled to GND
-
-// Alter timing for graphical display
-#ifndef ST7920_DELAY_1
-  #define ST7920_DELAY_1 DELAY_NS(125)
-#endif
-#ifndef ST7920_DELAY_2
-  #define ST7920_DELAY_2 DELAY_NS(125)
-#endif
-#ifndef ST7920_DELAY_3
-  #define ST7920_DELAY_3 DELAY_NS(125)
-=======
 #if ENABLED(BLTOUCH)
   #define SERVO0_PIN                         27
   #undef BEEPER_PIN
@@ -89,16 +63,11 @@
   #define BOARD_ST7920_DELAY_1 DELAY_NS(125)
   #define BOARD_ST7920_DELAY_2 DELAY_NS(125)
   #define BOARD_ST7920_DELAY_3 DELAY_NS(125)
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_MELZI_CREALITY.h
 #endif
 
 #if ENABLED(MINIPANEL)
   #undef DOGLCD_CS
-<<<<<<< HEAD:Marlin/pins_MELZI_CREALITY.h
-  #define DOGLCD_CS        LCD_PINS_RS
-=======
   #define DOGLCD_CS LCD_PINS_RS
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_MELZI_CREALITY.h
 #endif
 
 /**

@@ -26,12 +26,8 @@
  *
  * This file is part of the Arduino Sd2Card Library
  */
-<<<<<<< HEAD:Marlin/SdFile.cpp
-#include "MarlinConfig.h"
-=======
 
 #include "../inc/MarlinConfig.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdFile.cpp
 
 #if ENABLED(SDSUPPORT)
 

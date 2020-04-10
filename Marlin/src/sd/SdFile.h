@@ -27,29 +27,16 @@
  */
 
 /**
- * \file
- * \brief SdFile class
- */
-
-/**
  * Arduino SdFat Library
  * Copyright (c) 2009 by William Greiman
  *
  * This file is part of the Arduino Sd2Card Library
  */
-<<<<<<< HEAD:Marlin/SdFile.h
-#ifndef _SDFILE_H_
-#define _SDFILE_H_
-
-#include "SdBaseFile.h"
-#include <Print.h>
-=======
 
 #include "SdBaseFile.h"
 
 #include <stdint.h>
 #include <string.h>
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdFile.h
 
 /**
  * \class SdFile
@@ -70,8 +57,3 @@ class SdFile : public SdBaseFile/*, public Print*/ {
   void write_P(PGM_P str);
   void writeln_P(PGM_P str);
 };
-<<<<<<< HEAD:Marlin/SdFile.h
-
-#endif // _SDFILE_H_
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdFile.h

@@ -117,11 +117,7 @@
 #define HEATER_BED_PIN                        18  // E6 Bed
 
 #ifndef FAN_PIN
-<<<<<<< HEAD:Marlin/pins_BRAINWAVE.h
-  #define FAN_PIN          31   // A3 Fan
-=======
   #define FAN_PIN                             31  // A3 Fan
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_BRAINWAVE.h
 #endif
 
 //

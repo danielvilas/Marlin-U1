@@ -34,11 +34,7 @@
   #error "MKS GEN 1.3/1.4 supports up to 2 hotends / E-steppers. Comment out this line to continue."
 #endif
 
-<<<<<<< HEAD:Marlin/pins_MKS_GEN_13.h
-#define BOARD_NAME "MKS GEN >= v1.3"
-=======
 #define BOARD_INFO_NAME "MKS GEN >= v1.3"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/ramps/pins_MKS_GEN_13.h
 
 //
 // Heaters / Fans

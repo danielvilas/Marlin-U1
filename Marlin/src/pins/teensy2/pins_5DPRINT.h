@@ -78,17 +78,10 @@
 //
 // Servos
 //
-<<<<<<< HEAD:Marlin/pins_5DPRINT.h
-#define SERVO0_PIN        41
-#define SERVO1_PIN        42
-#define SERVO2_PIN        43
-#define SERVO3_PIN        44
-=======
 #define SERVO0_PIN                            41
 #define SERVO1_PIN                            42
 #define SERVO2_PIN                            43
 #define SERVO3_PIN                            44
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_5DPRINT.h
 
 //
 // Limit Switches
@@ -119,16 +112,6 @@
 //
 // Digital Microstepping
 //
-<<<<<<< HEAD:Marlin/pins_5DPRINT.h
-#define X_MS1_PIN          25   // B5
-#define X_MS2_PIN          26   // B6
-#define Y_MS1_PIN           9   // E1
-#define Y_MS2_PIN           8   // E0
-#define Z_MS1_PIN           7   // D7
-#define Z_MS2_PIN           6   // D6
-#define E0_MS1_PIN          5   // D5
-#define E0_MS2_PIN          4   // D4
-=======
 #define X_MS1_PIN                             25  // B5
 #define X_MS2_PIN                             26  // B6
 #define Y_MS1_PIN                              9  // E1
@@ -137,7 +120,6 @@
 #define Z_MS2_PIN                              6  // D6
 #define E0_MS1_PIN                             5  // D5
 #define E0_MS2_PIN                             4  // D4
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_5DPRINT.h
 
 //
 // Temperature Sensors
@@ -152,26 +134,15 @@
 #define HEATER_BED_PIN                        14  // C4
 
 #ifndef FAN_PIN
-<<<<<<< HEAD:Marlin/pins_5DPRINT.h
-  #define FAN_PIN          16   // C6  PWM3A
-=======
   #define FAN_PIN                             16  // C6  PWM3A
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_5DPRINT.h
 #endif
 
 //
 // Misc. Functions
 //
-<<<<<<< HEAD:Marlin/pins_5DPRINT.h
-#define SDSS               20   // B0
-
-//DIGIPOTS slave addresses
-#define DIGIPOT_I2C_ADDRESS_A 0x2C   // unshifted slave address for DIGIPOT 0x2C (0x58 <- 0x2C << 1)
-=======
 #define SDSS                                  20  // B0
 
 //DIGIPOTS slave addresses
 #ifndef DIGIPOT_I2C_ADDRESS_A
   #define DIGIPOT_I2C_ADDRESS_A 0x2C              // unshifted slave address for DIGIPOT 0x2C (0x58 <- 0x2C << 1)
 #endif
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/teensy2/pins_5DPRINT.h

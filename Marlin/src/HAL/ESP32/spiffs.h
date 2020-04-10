@@ -23,17 +23,4 @@
 
 extern bool spiffs_initialized;
 
-<<<<<<< HEAD:Marlin/types.h
-#include <stdint.h>
-
-typedef unsigned long millis_t;
-
-typedef struct {
-  int8_t x_index, y_index;
-  float distance; // When populated, the distance from the search location
-} mesh_index_pair;
-
-#endif
-=======
 void spiffs_init();
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/HAL/ESP32/spiffs.h

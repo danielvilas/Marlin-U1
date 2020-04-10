@@ -25,11 +25,7 @@
  * Geeetech GT2560 Revision A+ board pin assignments
  */
 
-<<<<<<< HEAD:Marlin/pins_GT2560_REV_A_PLUS.h
-#define BOARD_NAME "GT2560 Rev.A+"
-=======
 #define BOARD_INFO_NAME "GT2560 Rev.A+"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/mega/pins_GT2560_REV_A_PLUS.h
 
 #include "pins_GT2560_REV_A.h"
 

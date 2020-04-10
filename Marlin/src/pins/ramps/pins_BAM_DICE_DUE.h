@@ -34,15 +34,9 @@
 //
 // M3/M4/M5 - Spindle/Laser Control
 //
-<<<<<<< HEAD:Marlin/pins_BAM_DICE_DUE.h
-#define SPINDLE_LASER_ENABLE_PIN 66   // Pin should have a pullup/pulldown!
-#define SPINDLE_DIR_PIN          67
-#define SPINDLE_LASER_PWM_PIN    44   // MUST BE HARDWARE PWM
-=======
 #define SPINDLE_LASER_ENA_PIN                66   // Pullup or pulldown!
 #define SPINDLE_DIR_PIN                      67
 #define SPINDLE_LASER_PWM_PIN                44   // Hardware PWM
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/ramps/pins_BAM_DICE_DUE.h
 
 #include "pins_RAMPS.h"
 

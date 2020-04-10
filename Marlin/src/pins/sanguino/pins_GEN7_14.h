@@ -58,11 +58,7 @@
 
 #define BOARD_INFO_NAME "Gen7 v1.4"
 
-<<<<<<< HEAD:Marlin/pins_GEN7_14.h
-#define GEN7_VERSION 14   // v1.4
-=======
 #define GEN7_VERSION                          14  // v1.4
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_GEN7_14.h
 
 //
 // Limit switches
@@ -118,12 +114,6 @@
 //
 // M3/M4/M5 - Spindle/Laser Control
 //
-<<<<<<< HEAD:Marlin/pins_GEN7_14.h
-#define SPINDLE_LASER_ENABLE_PIN 20   // Pin should have a pullup/pulldown!
-#define SPINDLE_LASER_PWM_PIN    16   // MUST BE HARDWARE PWM
-#define SPINDLE_DIR_PIN          21
-=======
 #define SPINDLE_LASER_ENA_PIN                 20  // Pullup or pulldown!
 #define SPINDLE_LASER_PWM_PIN                 16  // Hardware PWM
 #define SPINDLE_DIR_PIN                       21
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_GEN7_14.h

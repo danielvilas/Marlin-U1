@@ -30,23 +30,13 @@
  * http://arduino.cc/forum/index.php/topic,51842.0.html
  */
 
-<<<<<<< HEAD:Marlin/dac_mcp4728.cpp
-#include "MarlinConfig.h"
-=======
 #include "../../inc/MarlinConfig.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/dac/dac_mcp4728.cpp
 
 #if ENABLED(DAC_STEPPER_CURRENT)
 
 #include "dac_mcp4728.h"
-<<<<<<< HEAD:Marlin/dac_mcp4728.cpp
-#include "enum.h"
-
-uint16_t mcp4728_values[XYZE];
-=======
 
 xyze_uint_t mcp4728_values;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/dac/dac_mcp4728.cpp
 
 /**
  * Begin I2C, get current values (input register and eeprom) of mcp4728

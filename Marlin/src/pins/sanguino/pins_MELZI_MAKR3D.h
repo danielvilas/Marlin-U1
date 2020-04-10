@@ -25,9 +25,5 @@
  * Melzi with ATmega1284 (MaKr3d version) pin assignments
  */
 
-<<<<<<< HEAD:Marlin/pins_MELZI_MAKR3D.h
-#define BOARD_NAME "Melzi (ATmega1284)"
-=======
 #define BOARD_INFO_NAME "Melzi (ATmega1284)"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_MELZI_MAKR3D.h
 #include "pins_MELZI.h"

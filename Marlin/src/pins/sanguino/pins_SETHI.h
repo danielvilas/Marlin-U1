@@ -57,11 +57,7 @@
 #define BOARD_INFO_NAME "Sethi 3D_1"
 
 #ifndef GEN7_VERSION
-<<<<<<< HEAD:Marlin/pins_SETHI.h
-  #define GEN7_VERSION 12   // v1.x
-=======
   #define GEN7_VERSION                        12  // v1.x
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_SETHI.h
 #endif
 
 //
@@ -100,26 +96,15 @@
 //
 // Heaters / Fans
 //
-<<<<<<< HEAD:Marlin/pins_SETHI.h
-#define HEATER_0_PIN        4
-#define HEATER_BED_PIN      3
-=======
 #define HEATER_0_PIN                           4
 #define HEATER_BED_PIN                         3
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_SETHI.h
 
 #ifndef FAN_PIN
   #if GEN7_VERSION >= 13
     // Gen7 v1.3 removed the fan pin
-<<<<<<< HEAD:Marlin/pins_SETHI.h
-    #define FAN_PIN          -1
-  #else
-    #define FAN_PIN          31
-=======
     #define FAN_PIN                           -1
   #else
     #define FAN_PIN                           31
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/pins/sanguino/pins_SETHI.h
   #endif
 #endif
 

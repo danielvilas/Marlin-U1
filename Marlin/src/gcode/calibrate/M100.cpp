@@ -55,26 +55,13 @@
  *
  * Initial version by Roxy-3D
  */
-<<<<<<< HEAD:Marlin/M100_Free_Mem_Chk.cpp
-=======
 #define M100_FREE_MEMORY_DUMPER     // Enable for the `M100 D` Dump sub-command
 #define M100_FREE_MEMORY_CORRUPTOR  // Enable for the `M100 C` Corrupt sub-command
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/gcode/calibrate/M100.cpp
 
 #define TEST_BYTE ((char) 0xE5)
 
 #if defined(__AVR__) || IS_32BIT_TEENSY
 
-<<<<<<< HEAD:Marlin/M100_Free_Mem_Chk.cpp
-#define M100_FREE_MEMORY_DUMPER     // Enable for the `M100 D` Dump sub-command
-#define M100_FREE_MEMORY_CORRUPTOR  // Enable for the `M100 C` Corrupt sub-command
-
-#include "Marlin.h"
-#include "parser.h"
-#include "hex_print_routines.h"
-
-#define TEST_BYTE ((char) 0xE5)
-=======
   extern char __bss_end;
   char *end_bss = &__bss_end,
        *free_memory_start = end_bss, *free_memory_end = 0,
@@ -98,7 +85,6 @@
 #elif defined(__SAM3X8E__)
 
   extern char _ebss;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/gcode/calibrate/M100.cpp
 
   char *end_bss = &_ebss,
        *free_memory_start = end_bss,
@@ -106,8 +92,6 @@
        *stacklimit = 0,
        *heaplimit = 0;
 
-<<<<<<< HEAD:Marlin/M100_Free_Mem_Chk.cpp
-=======
   #define MEMORY_END_CORRECTION 0x10000  // need to stay well below 0x20080000 or M100 F crashes
 
 #elif defined(__SAMD51__)
@@ -128,7 +112,6 @@
   #error "M100 - unsupported CPU"
 #endif
 
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/gcode/calibrate/M100.cpp
 //
 // Utility functions
 //

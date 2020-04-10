@@ -35,8 +35,4 @@ void GcodeSuite::M149() {
   else if (parser.seenval('F')) parser.set_input_temp_units(TEMPUNIT_F);
 }
 
-<<<<<<< HEAD:Marlin/pins_ZRIB_V20.h
-#include "pins_MKS_GEN_13.h"
-=======
 #endif // TEMPERATURE_UNITS_SUPPORT
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/gcode/units/M149.cpp

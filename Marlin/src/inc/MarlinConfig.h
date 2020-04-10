@@ -32,41 +32,13 @@
 #include "../pins/pins.h"
 #include HAL_PATH(../HAL, spi_pins.h)
 
-<<<<<<< HEAD:Marlin/MarlinConfig.h
-#ifndef MARLIN_CONFIG_H
-#define MARLIN_CONFIG_H
-
-#include "boards.h"
-#include "macros.h"
-#include "Version.h"
-#include "Configuration.h"
-#include "Conditionals_LCD.h"
-#include "drivers.h"
-#include "Configuration_adv.h"
-
-#if USE_MARLINSERIAL
-  #define HardwareSerial_h // trick to disable the standard HWserial
-#endif
-
-#include "types.h"
-#include "HAL.h"
-#include "pins.h"
-=======
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/inc/MarlinConfig.h
 #include "Conditionals_post.h"
 #include HAL_PATH(../HAL, inc/Conditionals_post.h)
 
 #include "../core/types.h"  // Ahead of sanity-checks
 
 #include "SanityCheck.h"
-<<<<<<< HEAD:Marlin/MarlinConfig.h
-#include "enum.h"
-#include "language.h"
-#include "utility.h"
-#include "serial.h"
-=======
 #include HAL_PATH(../HAL, inc/SanityCheck.h)
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/inc/MarlinConfig.h
 
 // Include all core headers
 #include "../core/language.h"

@@ -33,22 +33,13 @@
  * This file is part of the Arduino Sd2Card Library
  */
 
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-#include "MarlinConfig.h"
-=======
 #include "../inc/MarlinConfig.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
 
 #if ENABLED(SDSUPPORT)
 
 #include "SdBaseFile.h"
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-#include "Marlin.h"
-
-=======
 
 #include "../MarlinCore.h"
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
 SdBaseFile* SdBaseFile::cwd_ = 0;   // Pointer to Current Working Directory
 
 // callback function for date/time
@@ -96,11 +87,7 @@ bool SdBaseFile::addDirCluster() {
 // cache a file's directory entry
 // return pointer to cached entry or null for failure
 dir_t* SdBaseFile::cacheDirEntry(uint8_t action) {
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-  if (!vol_->cacheRawBlock(dirBlock_, action)) return NULL;
-=======
   if (!vol_->cacheRawBlock(dirBlock_, action)) return nullptr;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
   return vol_->cache()->dir + dirIndex_;
 }
 
@@ -292,11 +279,7 @@ int16_t SdBaseFile::fgets(char* str, int16_t num, char* delim) {
  *
  * \return true for success, false for failure.
  */
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-bool SdBaseFile::getFilename(char * const name) {
-=======
 bool SdBaseFile::getDosName(char * const name) {
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
   if (!isOpen()) return false;
 
   if (isRoot()) {
@@ -362,11 +345,7 @@ int8_t SdBaseFile::lsPrintNext(uint8_t flags, uint8_t indent) {
         && DIR_IS_FILE_OR_SUBDIR(&dir)) break;
   }
   // indent for dir level
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-  for (uint8_t i = 0; i < indent; i++) SERIAL_CHAR(' ');
-=======
   LOOP_L_N(i, indent) SERIAL_CHAR(' ');
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
 
   // print name
   LOOP_L_N(i, 11) {
@@ -868,11 +847,7 @@ bool SdBaseFile::openParent(SdBaseFile* dir) {
 
   // search for parent in '../..'
   do {
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-    if (file.readDir(&entry, NULL) != 32) return false;
-=======
     if (file.readDir(&entry, nullptr) != 32) return false;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
     c = entry.firstClusterLow;
     c |= (uint32_t)entry.firstClusterHigh << 16;
   } while (c != cluster);
@@ -936,11 +911,7 @@ int SdBaseFile::peek() {
 // print uint8_t with width 2
 static void print2u(const uint8_t v) {
   if (v < 10) SERIAL_CHAR('0');
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-  SERIAL_ECHO_F(v, DEC);
-=======
   SERIAL_ECHO(int(v));
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
 }
 
 /**
@@ -992,11 +963,7 @@ void SdBaseFile::printFatTime(uint16_t fatTime) {
  */
 bool SdBaseFile::printName() {
   char name[FILENAME_LENGTH];
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-  if (!getFilename(name)) return false;
-=======
   if (!getDosName(name)) return false;
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
   SERIAL_ECHO(name);
   return true;
 }
@@ -1121,11 +1088,7 @@ int8_t SdBaseFile::readDir(dir_t* dir, char* longFilename) {
         if (WITHIN(seq, 1, MAX_VFAT_ENTRIES)) {
           // TODO: Store the filename checksum to verify if a long-filename-unaware system modified the file table.
           n = (seq - 1) * (FILENAME_LENGTH);
-<<<<<<< HEAD:Marlin/SdBaseFile.cpp
-          for (uint8_t i = 0; i < FILENAME_LENGTH; i++)
-=======
           LOOP_L_N(i, FILENAME_LENGTH)
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/sd/SdBaseFile.cpp
             longFilename[n + i] = (i < 5) ? VFAT->name1[i] : (i < 11) ? VFAT->name2[i - 5] : VFAT->name3[i - 11];
           // If this VFAT entry is the last one, add a NUL terminator at the end of the string
           if (VFAT->sequenceNumber & 0x40) longFilename[n + FILENAME_LENGTH] = '\0';

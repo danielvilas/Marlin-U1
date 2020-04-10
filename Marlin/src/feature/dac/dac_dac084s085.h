@@ -21,21 +21,6 @@
  */
 #pragma once
 
-<<<<<<< HEAD:Marlin/blinkm.h
-/**
- * blinkm.h - Control a BlinkM over i2c
- */
-
-#ifndef _BLINKM_H_
-#define _BLINKM_H_
-
-struct LEDColor;
-typedef LEDColor LEDColor;
-
-void blinkm_set_led_color(const LEDColor &color);
-
-#endif // _BLINKM_H_
-=======
 class dac084s085 {
   public:
     dac084s085();
@@ -44,4 +29,3 @@ class dac084s085 {
   private:
     static void cshigh();
 };
->>>>>>> 0518dec60d0931745efa2812fa388f33d68cfa29:Marlin/src/feature/dac/dac_dac084s085.h
